@@ -2,25 +2,27 @@
 
     <!-- what config we are going to run (should match folder name) -->
     <arg name="verbosity"   default="INFO" /> <!-- ALL, DEBUG, INFO, WARNING, ERROR, SILENT -->
-    <arg name="config"      default="euroc_mav" /> <!-- euroc_mav, tum_vi, rpng_aruco -->
+    <arg name="config"      default="mate20" /> <!-- euroc_mav, tum_vi, rpng_aruco, mate20 -->
     <arg name="config_path" default="$(find ov_msckf)/../config/$(arg config)/estimator_config.yaml" />
 
     <!-- mono or stereo and what ros bag to play -->
-    <arg name="max_cameras" default="2" />
-    <arg name="use_stereo"  default="true" />
+    <arg name="max_cameras" default="1" />
+    <arg name="use_stereo"  default="false" />
     <arg name="bag_start"   default="0" /> <!-- v1-2: 0, mh1: 40, mh2: 35, mh3: 17.5, mh4-5: 15 -->
     <arg name="bag_rate"    default="1" />
-    <arg name="dataset"     default="V1_01_easy" /> <!-- V1_01_easy, V1_02_medium, V2_02_medium -->
-    <arg name="dobag"       default="false" /> <!-- if we should play back the bag -->
-    <arg name="bag"         default="/media/patrick/RPNG\ FLASH\ 3/$(arg config)/$(arg dataset).bag" />
+    <arg name="dataset"     default="mate20" /> <!-- V1_01_easy, V1_02_medium, V2_02_medium -->
+    <arg name="dobag"       default="true" /> <!-- if we should play back the bag -->
+    <arg name="bag"         default="/media/psf/work/data/slam/mate20/dataset/indoor_walking_loop_staticinit_2/cam+imu.bag" />
+    <!-- <arg name="bag"         default="/media/psf/work/data/euroc_data/$(arg dataset).bag" /> -->
+    <!-- <arg name="bag"         default="/media/patrick/RPNG\ FLASH\ 3/$(arg config)/$(arg dataset).bag" /> -->
 <!--    <arg name="bag"         default="/home/patrick/datasets/$(arg config)/$(arg dataset).bag" />-->
 <!--    <arg name="bag"         default="/datasets/$(arg config)/$(arg dataset).bag" />-->
 
     <!-- saving trajectory path and timing information -->
-    <arg name="dosave"      default="false" />
-    <arg name="dotime"      default="false" />
-    <arg name="path_est"    default="/tmp/traj_estimate.txt" />
-    <arg name="path_time"   default="/tmp/traj_timing.txt" />
+    <arg name="dosave"      default="true" />
+    <arg name="dotime"      default="true" />
+    <arg name="path_est"    default="/home/wayne/work/code/catkin_wss/openvins_ws/src/open_vins/test/traj_estimate.txt" />
+    <arg name="path_time"   default="/home/wayne/work/code/catkin_wss/openvins_ws/src/open_vins/test/traj_timing.txt" />
 
     <!-- if we should viz the groundtruth -->
     <arg name="dolivetraj"  default="false" />
