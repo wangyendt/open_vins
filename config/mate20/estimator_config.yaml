@@ -84,7 +84,7 @@ grid_x: 5 # extraction sub-grid count for horizontal direction (uniform tracking
 grid_y: 5 # extraction sub-grid count for vertical direction (uniform tracking)
 min_px_dist: 10 # distance between features (features near each other provide less information)
 knn_ratio: 0.70 # descriptor knn threshold for the top two descriptor matches
-track_frequency: 30.0 # frequency we will perform feature tracking at (in frames per second / hertz)
+track_frequency: 31.0 # frequency we will perform feature tracking at (in frames per second / hertz)
 downsample_cameras: false # will downsample image in half if true
 num_opencv_threads: 4 # -1: auto, 0-1: serial, >1: number of threads
 histogram_method: "HISTOGRAM" # NONE, HISTOGRAM, CLAHE
@@ -119,7 +119,7 @@ relative_config_imucam: "cam+imu-camchain-imucam.yaml"
 dataset_path: "/media/psf/work/data/slam/mate20/dataset/indoor_walking_loop_staticinit_2"
 #dataset_path: "/media/psf/work/data/euroc_data/MH_01_easy"
 gt_file_path: ""
-output_pose_file_path: "/home/wayne/work/code/catkin_wss/openvins_ws/src/open_vins/ov_msckf/test/result/result.txt"
+output_pose_file_path: "/home/wayne/work/code/catkin_wss/openvins_ws/src/open_vins/test/result/result.txt"
 t_start: 0
 t_end: -1
 
